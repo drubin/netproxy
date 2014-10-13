@@ -1,17 +1,31 @@
 {
-  "iptables_location": "/sbin/iptables", // Required to generate iptables rules
-  "haproxy_bind_ip": "YOURIPHERE", // IP address of your remote server, required for every mode
-  "dnat_base_ip": "192.168.178.51", // Only required for mode "non-sni"
-  "dnat_base_port": 27200, // Only required for mode "non-sni"
-  "loopback_base_ip": "127.0.0.51", // Only required for mode "local"
-  "server_options": "check inter 10s fastinter 2s downinter 2s fall 1800", // Don't touch unless you know what you're doing
+  "_": "Required to generate iptables rules", 
+  "iptables_location": "/sbin/iptables",
+
+  "_": "IP address of your remote server, required for every mode",
+  "haproxy_bind_ip": "YOURIPHERE", 
+
+  "_": "Only required for mode 'non-sni'",
+  "dnat_base_ip": "192.168.178.51", 
+
+  "_": "Only required for mode 'non-sni'",
+  "dnat_base_port": 27200, 
+
+  "_": "Only required for mode 'local'",
+  "loopback_base_ip": "127.0.0.51", 
+
+  "_": "Don't touch unless you know what you're doing",
+  "server_options": "check inter 10s fastinter 2s downinter 2s fall 1800", 
+
   "stats": {
-    "enabled": false, // Set to true to enable HAProxy stats web page
+    "_":"Set to true to enable HAProxy stats web page",
+    "enabled": false, 
     "port": 27199,
     "user": "haproxy",
     "password": "Change-Me-Now"
   },
-  // *** PROXY CONFIGURATION STARTS HERE
+
+  "_":"PROXY CONFIGURATION STARTS HERE",
   "proxies":[
     {
       "name":"hulu-secure",

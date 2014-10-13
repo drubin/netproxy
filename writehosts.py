@@ -5,8 +5,6 @@ import re
 
 json_config = open("config.json").read()
 
-# Remove comments.
-json_config = re.sub("//.*", "", json_config, re.MULTILINE)
 config = json.loads(json_config)
 
 # Create the hosts file lines.
